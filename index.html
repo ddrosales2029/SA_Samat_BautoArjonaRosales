@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SA_Samat_BautoArjona_Rosales</title>
+  <title>AA2_Samat_Rosales</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap" rel="stylesheet">
   <style>
@@ -84,26 +84,26 @@
     let lis1 = [];
     
     const lis2 = [
-      { p1: "https://tr.rbxcdn.com/180DAY-db3e22941a6af57f04a47d2f1052cedb/420/420/WaistAccessory/Webp/noFilter", p2: "Princess Dress", p3: 60 },
-      { p1: "https://tr.rbxcdn.com/180DAY-26faf3074d086e80c3262a553e678aa0/420/420/BackAccessory/Webp/noFilter", p2: "Sad Chiikawa", p3: 135 },
-      { p1: "https://i.imgur.com/H7ZxnHH.png", p2: "Refreshing Summer Hat", p3: 70 },
-      { p1: "https://i.imgur.com/LlCLBAx.png", p2: "Teddy Bear", p3: 50 },
-      { p1: "https://i.imgur.com/Dn1MNQr.png", p2: "Delicious Sandwich", p3: 60 },
-      { p1: "https://tr.rbxcdn.com/180DAY-d949eb32ae4b61a4e737cddfc163daf7/420/420/BackAccessory/Webp/noFilter", p2: "Chiikawa Backpack", p3: 40 },
-      { p1: "https://i.imgur.com/uxyNlKr.png", p2: "Giant Tuna", p3: 200 },
-      { p1: "https://i.imgur.com/B8eMkEO.png", p2: "Beach Ball", p3: 135 },
-      { p1: "https://i.imgur.com/NWBWEqy.png", p2: "Sombrero", p3: 70 },
-      { p1: "https://i.imgur.com/4yOPACX.png", p2: "Rainbow Wings", p3: 500 },
-      { p1: "https://i.imgur.com/JYP2LZr.png", p2: "Flower Hat", p3: 10 },
-      { p1: "https://i.imgur.com/ECsGiHe.png", p2: "Kitty Cat", p3: 1000 },
-      { p1: "", p2: "Epic Sword", p3: 150 },
-      { p1: "", p2: "Red Potion", p3: 25 },
-      { p1: "", p2: "Cool Glasses", p3: 85 },
-      { p1: "", p2: "Money Bag", p3: 999 },
-      { p1: "", p2: "King Crown", p3: 450 },
-      { p1: "", p2: "Little Ghost", p3: 110 },
-      { p1: "", p2: "Bat Wings", p3: 320 },
-      { p1: "", p2: "Ninja Cowl", p3: 65 }
+      { p1: "https://tr.rbxcdn.com/180DAY-db3e22941a6af57f04a47d2f1052cedb/420/420/WaistAccessory/Webp/noFilter", p2: "Princess Dress", prod_price: 60 },
+      { p1: "https://tr.rbxcdn.com/180DAY-26faf3074d086e80c3262a553e678aa0/420/420/BackAccessory/Webp/noFilter", p2: "Sad Chiikawa", prod_price: 135 },
+      { p1: "https://i.imgur.com/H7ZxnHH.png", p2: "Refreshing Summer Hat", prod_price: 70 },
+      { p1: "https://i.imgur.com/LlCLBAx.png", p2: "Teddy Bear", prod_price: 50 },
+      { p1: "https://i.imgur.com/Dn1MNQr.png", p2: "Delicious Sandwich", prod_price: 60 },
+      { p1: "https://tr.rbxcdn.com/180DAY-d949eb32ae4b61a4e737cddfc163daf7/420/420/BackAccessory/Webp/noFilter", p2: "Chiikawa Backpack", prod_price: 40 },
+      { p1: "https://i.imgur.com/uxyNlKr.png", p2: "Giant Tuna", prod_price: 200 },
+      { p1: "https://i.imgur.com/B8eMkEO.png", p2: "Beach Ball", prod_price: 135 },
+      { p1: "https://i.imgur.com/NWBWEqy.png", p2: "Sombrero", prod_price: 70 },
+      { p1: "https://i.imgur.com/4yOPACX.png", p2: "Rainbow Wings", prod_price: 500 },
+      { p1: "https://i.imgur.com/JYP2LZr.png", p2: "Flower Hat", prod_price: 10 },
+      { p1: "https://i.imgur.com/ECsGiHe.png", p2: "Kitty Cat", prod_price: 1000 },
+      { p1: "", p2: "Epic Sword", prod_price: 150 },
+      { p1: "", p2: "Red Potion", prod_price: 25 },
+      { p1: "", p2: "Cool Glasses", prod_price: 85 },
+      { p1: "", p2: "Money Bag", prod_price: 999 },
+      { p1: "", p2: "King Crown", prod_price: 450 },
+      { p1: "", p2: "Little Ghost", prod_price: 110 },
+      { p1: "", p2: "Bat Wings", prod_price: 320 },
+      { p1: "", p2: "Ninja Cowl", prod_price: 65 }
     ];
 
     function func1() {
@@ -115,7 +115,7 @@
           <div class="product-card text-center">
             <img src="${val1.p1}" alt="a picture of a ${val1.p2.toLowerCase()}" class="img-fluid mb-2 product-img" onerror="this.src='https://via.placeholder.com/150?text=Item'">
             <h5>${val1.p2}</h5>
-            <p class="text-muted">Price: ₱${val1.p3}</p>
+            <p class="text-muted">Price: ₱${val1.prod_price}</p>
             <button class="btn btn-sm btn-outline-success w-100" onclick="func2(${idx1})">Add to Cart</button>
           </div>
         </div>`;
@@ -138,10 +138,10 @@
       let var3 = 0;
 
       lis1.forEach((val1, idx1) => {
-        var3 += val1.p3;
+        var3 += val1.prod_price;
         var2.innerHTML += `
           <li class="mb-2 d-flex justify-content-between align-items-center">
-            <span>${val1.p2} <small class="text-muted">(₱${val1.p3})</small></span>
+            <span>${val1.p2} <small class="text-muted">(₱${val1.prod_price})</small></span>
             <button class="btn btn-sm btn-link text-danger" onclick="func3(${idx1})">Remove</button>
           </li>`;
       });
