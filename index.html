@@ -56,13 +56,13 @@
 
   <div class="row">
     <div class="col-md-7">
-      <h3 class="p-2 mb-3">Catalog</h3>
+      <h2 class="p-2 mb-3">Catalog</h2>
       <div id="catalog-area" class="row"></div>
     </div>
 
     <div class="col-md-5">
       <div class="cart-box">
-        <h3>Your Cart</h3>
+        <h2>Your Cart</h2>
         <hr>
         <ul id="cart-items" class="list-unstyled"></ul>
         <hr>
@@ -82,28 +82,27 @@
 
   <script>
     let lis1 = [];
-    
     const lis2 = [
-      { p1: "https://tr.rbxcdn.com/180DAY-db3e22941a6af57f04a47d2f1052cedb/420/420/WaistAccessory/Webp/noFilter", p2: "Princess Dress", prod_price: 60 },
-      { p1: "https://tr.rbxcdn.com/180DAY-26faf3074d086e80c3262a553e678aa0/420/420/BackAccessory/Webp/noFilter", p2: "Sad Chiikawa", prod_price: 135 },
-      { p1: "https://i.imgur.com/H7ZxnHH.png", p2: "Refreshing Summer Hat", prod_price: 70 },
-      { p1: "https://i.imgur.com/LlCLBAx.png", p2: "Teddy Bear", prod_price: 50 },
-      { p1: "https://i.imgur.com/Dn1MNQr.png", p2: "Delicious Sandwich", prod_price: 60 },
-      { p1: "https://tr.rbxcdn.com/180DAY-d949eb32ae4b61a4e737cddfc163daf7/420/420/BackAccessory/Webp/noFilter", p2: "Chiikawa Backpack", prod_price: 40 },
-      { p1: "https://i.imgur.com/uxyNlKr.png", p2: "Giant Tuna", prod_price: 200 },
-      { p1: "https://i.imgur.com/B8eMkEO.png", p2: "Beach Ball", prod_price: 135 },
-      { p1: "https://i.imgur.com/NWBWEqy.png", p2: "Sombrero", prod_price: 70 },
-      { p1: "https://i.imgur.com/4yOPACX.png", p2: "Rainbow Wings", prod_price: 500 },
-      { p1: "https://i.imgur.com/JYP2LZr.png", p2: "Flower Hat", prod_price: 10 },
-      { p1: "https://i.imgur.com/ECsGiHe.png", p2: "Kitty Cat", prod_price: 1000 },
-      { p1: "", p2: "Epic Sword", prod_price: 150 },
-      { p1: "", p2: "Red Potion", prod_price: 25 },
-      { p1: "", p2: "Cool Glasses", prod_price: 85 },
-      { p1: "", p2: "Money Bag", prod_price: 999 },
-      { p1: "", p2: "King Crown", prod_price: 450 },
-      { p1: "", p2: "Little Ghost", prod_price: 110 },
-      { p1: "", p2: "Bat Wings", prod_price: 320 },
-      { p1: "", p2: "Ninja Cowl", prod_price: 65 }
+      { prod_img: "https://tr.rbxcdn.com/180DAY-db3e22941a6af57f04a47d2f1052cedb/420/420/WaistAccessory/Webp/noFilter", prod_name: "Princess Dress", prod_price: 60 },
+      { prod_img: "https://tr.rbxcdn.com/180DAY-26faf3074d086e80c3262a553e678aa0/420/420/BackAccessory/Webp/noFilter", prod_name: "Sad Chiikawa", prod_price: 135 },
+      { prod_img: "https://i.imgur.com/H7ZxnHH.png", prod_name: "Refreshing Summer Hat", prod_price: 70 },
+      { prod_img: "https://i.imgur.com/LlCLBAx.png", prod_name: "Teddy Bear", prod_price: 50 },
+      { prod_img: "https://i.imgur.com/Dn1MNQr.png", prod_name: "Delicious Sandwich", prod_price: 60 },
+      { prod_img: "https://tr.rbxcdn.com/180DAY-d949eb32ae4b61a4e737cddfc163daf7/420/420/BackAccessory/Webp/noFilter", prod_name: "Chiikawa Backpack", prod_price: 40 },
+      { prod_img: "https://i.imgur.com/uxyNlKr.png", prod_name: "Giant Tuna", prod_price: 200 },
+      { prod_img: "https://i.imgur.com/B8eMkEO.png", prod_name: "Beach Ball", prod_price: 135 },
+      { prod_img: "https://i.imgur.com/NWBWEqy.png", prod_name: "Sombrero", prod_price: 70 },
+      { prod_img: "https://i.imgur.com/4yOPACX.png", prod_name: "Rainbow Wings", prod_price: 500 },
+      { prod_img: "https://i.imgur.com/JYP2LZr.png", prod_name: "Flower Hat", prod_price: 10 },
+      { prod_img: "https://i.imgur.com/ECsGiHe.png", prod_name: "Kitty Cat", prod_price: 1000 },
+      { prod_img: "https://tr.rbxcdn.com/180DAY-d03d867f0f5520e14cf35b80ee1a6636/420/420/BackAccessory/Webp/noFilter", prod_name: "Epic Sword", prod_price: 150 },
+      { prod_img: "https://tr.rbxcdn.com/180DAY-26df6259a3626fa8d94e835fcdb8c660/420/420/WaistAccessory/Webp/noFilter", prod_name: "Red Potion", prod_price: 25 },
+      { prod_img: "https://tr.rbxcdn.com/180DAY-fc9ec0ac70c7a424a6c66f06d197bfee/420/420/FaceAccessory/Webp/noFilter", prod_name: "Cool Glasses", prod_price: 85 },
+      { prod_img: "https://tr.rbxcdn.com/180DAY-cff67ec73237c9960d715f491c99e10c/420/420/JacketAccessory/Webp/noFilter", prod_name: "Money Bag", prod_price: 999 },
+      { prod_img: "https://tr.rbxcdn.com/180DAY-6ade8e989db8cda42dd5b27ff67c178b/420/420/Hat/Webp/noFilter", prod_name: "King Crown", prod_price: 450 },
+      { prod_img: "https://tr.rbxcdn.com/180DAY-61aac6816a2a840973897c81889c20a6/420/420/BackAccessory/Webp/noFilter", prod_name: "Little Ghost", prod_price: 110 },
+      { prod_img: "https://tr.rbxcdn.com/180DAY-067a9c5ca0a28835fd27f88a5d907af1/420/420/BackAccessory/Webp/noFilter", prod_name: "Bat Wings", prod_price: 320 },
+      { prod_img: "https://tr.rbxcdn.com/180DAY-e80bd376d594edcc12d44a9666fdc24f/420/420/Hat/Webp/noFilter", prod_name: "Ninja Cowl", prod_price: 65 }
     ];
 
     function func1() {
@@ -113,8 +112,8 @@
         var1.innerHTML += `
         <div class="col-md-6">
           <div class="product-card text-center">
-            <img src="${val1.p1}" alt="a picture of a ${val1.p2.toLowerCase()}" class="img-fluid mb-2 product-img" onerror="this.src='https://via.placeholder.com/150?text=Item'">
-            <h5>${val1.p2}</h5>
+            <img src="${val1.prod_img}" alt="a picture of a ${val1.prod_name.toLowerCase()}" class="img-fluid mb-2 product-img" onerror="this.src='https://via.placeholder.com/150?text=Item'">
+            <h5>${val1.prod_name}</h5>
             <p class="text-muted">Price: ₱${val1.prod_price}</p>
             <button class="btn btn-sm btn-outline-success w-100" onclick="func2(${idx1})">Add to Cart</button>
           </div>
@@ -141,7 +140,7 @@
         var3 += val1.prod_price;
         var2.innerHTML += `
           <li class="mb-2 d-flex justify-content-between align-items-center">
-            <span>${val1.p2} <small class="text-muted">(₱${val1.prod_price})</small></span>
+            <span>${val1.prod_name} <small class="text-muted">(₱${val1.prod_price})</small></span>
             <button class="btn btn-sm btn-link text-danger" onclick="func3(${idx1})">Remove</button>
           </li>`;
       });
